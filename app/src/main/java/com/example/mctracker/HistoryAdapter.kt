@@ -29,9 +29,8 @@ class MyAdapter(private val examList: MutableList<HistoryItem>) :
         val examItem = examList[position]
 
         holder.refuelDate.text = examItem.refuelDate
-        holder.distance.text = examItem.distance
-        holder.fuelAmount.text = examItem.fuelAmount
-
+        holder.distance.text = "${examItem.distance}Km"
+        holder.fuelAmount.text = "${examItem.fuelAmount} Liters @₱${examItem.price}/L"
 
     }
 

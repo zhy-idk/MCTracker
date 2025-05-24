@@ -14,7 +14,6 @@
         android:layout_marginEnd="20dp"
         android:maxLines="1"
         android:text="01/01/2020"
-        android:textColor="@color/black"
         android:textSize="16sp" />
 
     <ImageView
@@ -24,7 +23,8 @@
         android:layout_below="@+id/refuelDate"
         android:layout_marginStart="20dp"
         android:layout_marginTop="7dp"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@drawable/speed_24dp"
+        app:tint="#4D4D4D" />
 
     <TextView
         android:id="@+id/distance"
@@ -46,7 +46,8 @@
         android:layout_below="@+id/distance"
         android:layout_marginStart="20dp"
         android:layout_marginTop="7dp"
-        app:srcCompat="@android:drawable/btn_star_big_off" />
+        app:srcCompat="@drawable/local_gas_station_24dp"
+        app:tint="#4D4D4D"/>
 
     <TextView
         android:id="@+id/fuelAmount"

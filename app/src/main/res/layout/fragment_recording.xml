@@ -44,7 +44,7 @@
             android:ems="10"
 
             android:hint="Odometer"
-            android:inputType="text" />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/textView3"
@@ -59,7 +59,7 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:hint="Liters"
-            android:inputType="text" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/textView4"
@@ -74,7 +74,7 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:hint="Price"
-            android:inputType="text" />
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/buttonRecord"

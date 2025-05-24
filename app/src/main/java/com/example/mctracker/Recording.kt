@@ -1,5 +1,6 @@
 package com.example.mctracker
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -21,13 +22,7 @@ class Recording : Fragment(R.layout.fragment_recording) {
     lateinit var etPrice: EditText
     lateinit var buttonRecord: Button
 
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         etDate = view.findViewById(R.id.etDate)
@@ -45,8 +40,6 @@ class Recording : Fragment(R.layout.fragment_recording) {
 
         etDate.setText(current.toString())
 
-
-
         etDate.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 val intent = Intent(requireContext(), DateSelectActivity::class.java)
@@ -59,7 +52,7 @@ class Recording : Fragment(R.layout.fragment_recording) {
 
         buttonRecord.setOnClickListener {
             if (etOdo.text.toString() != "" && etLiters.text.toString() != "" && etPrice.text.toString() != "") {
-                edit.putStringSet(size, setOf("${size}, ${etOdo.text.toString()}, ${etLiters.text.toString()}, ${etPrice.text.toString()}"))
+                edit.putStringSet(size, setOf("${etDate.text.toString()},${etOdo.text.toString()},${etLiters.text.toString()},${etPrice.text.toString()}"))
                 edit.apply()
 
                 etOdo.setText("")

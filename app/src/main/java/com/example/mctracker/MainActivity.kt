@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonRecord = findViewById<Button>(R.id.buttonRecord)
         val buttonHistory = findViewById<Button>(R.id.buttonHistory)
+        val buttonData = findViewById<Button>(R.id.buttonData)
 
 
         buttonRecord.setOnClickListener {
@@ -45,6 +46,10 @@ class MainActivity : AppCompatActivity() {
             val fragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.fragmentContainerView2, History())
             fragmentTransaction.commit()
+        }
+
+        buttonData.setOnClickListener{
+            Toast.makeText(this, "Not yet available.", Toast.LENGTH_SHORT).show()
         }
 
     }
